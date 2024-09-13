@@ -1,180 +1,402 @@
 <!DOCTYPE html>
-<html lang="en">
-
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Farm</title>
+        <style>
+
+            /* -------------------- IMPORTED FONTS -------------------------------------- */
+
+                @font-face {
+                    font-family: 'Habibi';
+                    font-style: normal;
+                    font-weight: 400;
+                    font-display: swap;
+                    src: url(https://fonts.gstatic.com/s/habibi/v21/CSR-4zFWkuqcTTNyQxhfRuUiSOt_.woff2) format('woff2');
+                    unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+                }
+
+                @font-face {
+                    font-family: 'Habibi';
+                    font-style: normal;
+                    font-weight: 400;
+                    font-display: swap;
+                    src: url(https://fonts.gstatic.com/s/habibi/v21/CSR-4zFWkuqcTTNyTRhfRuUiSA.woff2) format('woff2');
+                    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+                }
+
+                @font-face {
+                    font-family: 'Irish Grover';
+                    font-style: normal;
+                    font-weight: 400;
+                    font-display: swap;
+                    src: url(https://fonts.gstatic.com/s/irishgrover/v23/buExpoi6YtLz2QW7LA4flVgv__RPSC8ocg.woff2) format('woff2');
+                    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+                }
+
+            /*-------------------- CSS RESET ---------------------------------------------------*/
+            /* -------------------- ROOT VARIABLES --------------------------------------- */
+
+            /* --------Headings------- */
+                h1, h2, h3, h4 {
+                    font-family: 'Irish Grover', cursive;
+                }
+                
+                h3 {
+                text-align: center; 
+                }
+
+                h1 {font-size: 2.5em;
+                    color: #ffffff; 
+                    text-shadow: 3px 3px 0 #000000; 
+                }
+
+                h2 {font-size: 1.75em;
+                }
+        
+                h3, p {font-size: 1.25em; 
+                }
+
+                p {
+                    font-family: 'Habibi', sans-serif; 
+                    font-size: 1em; 
+                    line-height: 1.6; 
+                    margin: 0 0 1em 0;
+                }
+
+                * {box-sizing:border-box;
+                    margin: 0pt;
+                    padding: 0pt;
+                }
+
+                html {background-color:#FFFFF;
+                }
+
+                body { min-width:320px;
+                }
+
+                header {
+                    display: flex;
+	                gap: 1rem;
+                    align-items: center;
+                    justify-content: space-between;
+                    box-sizing: border-box;
+                    padding: 20pt;
+                    background-color: #06A816;
+                }
+
+                footer section {
+                    box-sizing: border-box;
+                    padding: 20pt;
+                    background-color: #06A816;
+                    color: #ffffff; 
+                    font-size: 0.9em; 
+                }
+
+                footer p {
+                    color: #06A816; 
+                    text-align: center; 
+                    background-color: #ffffff; 
+                    margin: 0; 
+                }
+
+                i {
+                    color: #ffffff; 
+                }
+
+                #fruits {
+                    box-sizing: border-box;
+                    padding: 20pt;
+                }
+
+                #vegetables {
+    box-sizing: border-box;
+    padding: 20pt;
+}
+
+            /* --------Nav------- */
+                nav button {
+                color: #ffffff; 
+                background-color: #E75D02; 
+                border: 2px solid #ffffff; 
+                padding: 0.5em 5em; 
+                border-radius: 0.4em; 
+                font-size: 1em; 
+                cursor: pointer; 
+                outline: none; =
+                transition: background-color 0.3s, color 0.3s; 
+                }
+
+                nav button:hover {
+                    background-color: #ffffff; 
+                    color: #E75D02; 
+                }
+            /* --------Item------- */
+                .item {
+                    position: relative; 
+                    display: inline-block; 
+                }
+
+                .item img {
+                    display: block; 
+                    width: 100%; 
+                    height: auto; 
+                }
+
+                .item p {
+                    position: absolute; 
+                    top: 50%; 
+                    left: 50%;
+                    transform: translate(-50%, -50%); 
+                    background-color: rgba(0, 0, 0, 0.8); 
+                    color: #ffffff; 
+                    padding: 0.5em 1em; 
+                    text-align: center; 
+                    font-size: 1.25em; 
+                }
+
+
+                
+            /* --------------------GLOBAL STYLES (mobile first/small) --------------------*/
+            /*-------------------- MEDIA QUERY (medium) --------------------------------*/
+            /*-------------------- MEDIA QUERY (large) ------------------------------------*/
+            /*-------------------- MEDIA QUERY (xl) ---------------------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+            
+          
+
+            
+        </style>
     </head>
 
-    <style>
-        @font-face {
-            font-family: 'Habibi';
-            font-style: normal;
-            font-weight: 400;
-            font-display: swap;
-            src: url(https://fonts.gstatic.com/s/habibi/v21/CSR-4zFWkuqcTTNyQxhfRuUiSOt_.woff2) format('woff2');
-            unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
-        }
-        @font-face {
-            font-family: 'Habibi';
-            font-style: normal;
-            font-weight: 400;
-            font-display: swap;
-            src: url(https://fonts.gstatic.com/s/habibi/v21/CSR-4zFWkuqcTTNyTRhfRuUiSA.woff2) format('woff2');
-            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-        }
-        @font-face {
-            font-family: 'Irish Grover';
-            font-style: normal;
-            font-weight: 400;
-            font-display: swap;
-            src: url(https://fonts.gstatic.com/s/irishgrover/v23/buExpoi6YtLz2QW7LA4flVgv__RPSC8ocg.woff2) format('woff2');
-            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-        }
+    <body>
+        <header>
+            <section>
+                <h1>Fiona's Farm</h1>
+                <br>
+                <p><i>Fresh from our farm to your family table</i></p>
+                <br>
+            </section>
+            <nav>
+                <a href="#fruits" class="nav-link"><button type="button">Fruits</button></a>
+                <a href="#vegetables" class="nav-link"><button type="button">Vegetables</button></a>
+            </nav>
+            <br>
 
-        Add to text content :Habibi
-        Add to headings Heading: "Irish Grover
-
-      
-        h1 {
-            font-size: 2.5em;
-        }
-
-        h2 {
-            font-size: 1.75em;
-        }
-
-        h3, p {
-            font-size: 1.25em; 
-        }
-
-
-
-
-
-        Colors
-        Green: #06A816
-        Orange: #E75D02
-        Black: #000000
-        White: #ffffff
-    </style>
-
-<body>
-    <header>
-        Fiona's Farm
-        Fresh from our farm to your family table
-
-        Fruits
-        Vegetables
-    </header>
-
-    <main>
-        <section>
-            Fruits
-            Welcome to our farm, where we take pride in growing a variety of delicious and nutritious fruits. Our commitment to sustainable farming practices ensures that every bite of our fruit is bursting with natural flavor and goodness. From the orchard to your table, we offer a selection of fresh, hand-picked fruits that are perfect for snacking, baking, and cooking. Experience the taste of nature's bounty with our premium quality fruits.
-
-            Fruits for Sale
-            (image)
-            Apples
-
-            (image)
-            Oranges
-
-            (image)
-            Peaches
-
-            (image)
-            Strawberries
-
-            (image)
-            Blueberries
-
-            (image)
-            Raspberries
-
-            (image)
-            Cherries
-
-            (image)
-            Pears
-
-            (image)
-            Plums
-
-            (image)
-            Grapes
-
-            (image)
-            Watermelons
-
-            (image)
-            Cantaloupes
-        </section>
-        <section>
-            Vegetables
-            At our farm, we are dedicated to growing a diverse array of vegetables that are both healthy and delicious. Our vegetables are cultivated using sustainable and eco-friendly methods to ensure the highest quality and flavor. Whether you are looking to create a fresh salad, cook a hearty meal, or simply enjoy a nutritious snack, our farm-fresh vegetables are the perfect choice. Taste the difference of locally grown produce with our vibrant and wholesome vegetables.
-
-            Vegetables for Sale
-
-            (image)
-            Broccoli
-
-            (image)
-            Lettuce
-
-            (image)
-            Eggplant
-
-            (image)
-            Spinach
-
-            (image)
-            Bean Sprout
-
-            (image)
-            Peas
-
-            (image)
-            Bell Pepper
-
-            (image)
-            Carrot
-
-            (image)
-            Potato
-
-            (image)
-            Cucumber
-
-            (image)
-            Tomato
-
-            (image)
-            Radish
-
-        </section>
-    </main>
+        </header>
     
-    <footer> 
-        Contact
-        1234 Fake Street,
-        Mesa, AZ 85111
-        (480) 555-1234
+        <section id="fruits">
 
-        Hours
-        Monday Closed
-        Tuesday 6:00 AM - 2:00PM
-        Wednesday 6:00 AM - 2:00PM
-        Thursday 6:00 AM - 2:00PM
-        Friday 6:00 AM - 9:00PM
-        Saturday 6:00 AM - 9:00PM
-        Sunday 6:00 AM - 5:00PM
+            <h2>Fruits</h2>
 
-        Copyright 2024
-    </footer>
+            <p>Welcome to our farm, where we take pride in growing a variety of delicious and nutritious fruits. Our commitment to sustainable farming practices ensures that every bite of our fruit is bursting with natural flavor and goodness. From the orchard to your table, we offer a selection of fresh, hand-picked fruits that are perfect for snacking, baking, and cooking. Experience the taste of nature's bounty with our premium quality fruits.</p>
+            
+            <h3>Fruits for Sale</h3>
 
-</body>
+                <div class="item-list">
 
+                    <div class="item">
+                        <img src="Images/apples.png" alt="Apples">
+                        <p>Apples</p>
+                    </div>
+
+                    <div class="item">
+                        <img src="Images/oranges.png" alt="Oranges">
+                        <p>Oranges</p>
+                    </div>
+
+                    <div class="item">
+                        <img src="Images/peaches.png" alt="Peaches">
+                        <p>Peaches</p>
+                    </div>
+
+                    <div class="item">
+                        <img src="images/strawberries.png" alt="Strawberries">
+                        <p>Strawberries</p>
+                    </div>
+
+                    <div class="item">
+                        <img src="Images/blueberries.png" alt="Blueberries">
+                        <p>Blueberries</p>
+                    </div>
+
+                    <div class="item">
+                        <img src="Images/raspberries.png" alt="Raspberries">
+                        <p>Raspberries</p>
+                    </div>
+
+                    <div class="item">
+                        <img src="Images/cherries.png" alt="Cherries">
+                        <p>Cherries</p>
+                    </div>
+
+                    <div class="item">
+                        <img src="Images/pears.png" alt="Pears">
+                        <p>Pears</p>
+                    </div>
+
+                    <div class="item">
+                        <img src="Images/plums.png" alt="Plums">
+                        <p>Plums</p>
+                    </div>
+
+                    <div class="item">
+                        <img src="Images/grapes.png" alt="Grapes">
+                        <p>Grapes</p>
+                    </div>
+
+                    <div class="item">
+                        <img src="Images/watermelons.png" alt="Watermelons">
+                        <p>Watermelons</p>
+                    </div>
+
+                    <div class="item">
+                        <img src="Images/cantalopes.png" alt="Cantaloupes">
+                        <p>Cantaloupes</p>
+                    </div>
+
+                </div>
+
+        </section>
+
+        <section id="vegetables">
+
+            <h2>Vegetables</h2>
+
+            <p>At our farm, we are dedicated to growing a diverse array of vegetables that are both healthy and delicious. Our vegetables are cultivated using sustainable and eco-friendly methods to ensure the highest quality and flavor. Whether you are looking to create a fresh salad, cook a hearty meal, or simply enjoy a nutritious snack, our farm-fresh vegetables are the perfect choice. Taste the difference of locally grown produce with our vibrant and wholesome vegetables.</p>
+            
+            <h3>Vegetables for Sale</h3>
+
+                <div class="item-list">
+
+                    <div class="item">
+                        <img src="Images/broccoli.png" alt="Broccoli">
+                        <p>Broccoli</p>
+                    </div>
+
+                    <div class="item">
+                        <img src="Images/lettuce.png" alt="Lettuce">
+                        <p>Lettuce</p>
+                    </div>
+
+                    <div class="item">
+                        <img src="Images/eggplant.png" alt="Eggplant">
+                        <p>Eggplant</p>
+                    </div>
+
+                    <div class="item">
+                        <img src="Images/spinach.png" alt="Spinach">
+                        <p>Spinach</p>
+                    </div>
+
+                    <div class="item">
+                        <img src="Images/bean-sprout.png" alt="Bean Sprout">
+                        <p>Bean Sprout</p>
+                    </div>
+
+                    <div class="item">
+                        <img src="Images/peas.png" alt="Peas">
+                        <p>Peas</p>
+                    </div>
+
+                    <div class="item">
+                        <img src="Images/bell-pepper.png" alt="Bell Pepper">
+                        <p>Bell Pepper</p>
+                    </div>
+
+                    <div class="item">
+                        <img src="Images/carrot.png" alt="Carrot">
+                        <p>Carrot</p>
+                    </div>
+
+                    <div class="item">
+                        <img src="Images/potato.png" alt="Potato">
+                        <p>Potato</p>
+                    </div>
+
+                    <div class="item">
+                        <img src="Images/cucumber.png" alt="Cucumber">
+                        <p>Cucumber</p>
+                    </div>
+
+                    <div class="item">
+                        <img src="Images/tomato.png" alt="Tomato">
+                        <p>Tomato</p>
+                    </div>
+
+                    <div class="item">
+                        <img src="Images/radish.png" alt="Radish">
+                        <p>Radish</p>
+                    </div>
+
+                </div>
+
+        </section>
+
+        <footer>
+            <section>
+                <div class="contact-info">
+                    <br>
+                    <h3>Contact</h3>
+                    <br>1234 Fake Street,
+                    <br>Mesa, AZ 85111
+                    <br>(480) 555-1234
+                </div>
+                <br>
+                <div class="hours">
+
+                    <h3>Hours</h3>
+
+                    <br>Monday: Closed
+                    <br>Tuesday: 6:00 AM - 2:00 PM
+                    <br>Wednesday: 6:00 AM - 2:00 PM
+                    <br>Thursday: 6:00 AM - 2:00 PM
+                    <br>Friday: 6:00 AM - 9:00 PM
+                    <br>Saturday: 6:00 AM - 9:00 PM
+                    <br>Sunday: 6:00 AM - 5:00 PM
+                </div>
+            </section>
+
+            <p>Copyright 2024</p>
+            <p></p>
+
+        </footer>
+    </body>
 </html>
+
 
