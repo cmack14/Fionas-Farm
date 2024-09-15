@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+    <html lang='en'>
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,8 +14,7 @@
                     font-weight: 400;
                     font-display: swap;
                     src: url(https://fonts.gstatic.com/s/habibi/v21/CSR-4zFWkuqcTTNyQxhfRuUiSOt_.woff2) format('woff2');
-                    unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
-                }
+                    unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;}
 
                 @font-face {
                     font-family: 'Habibi';
@@ -35,26 +35,269 @@
                 }
 
             /*-------------------- CSS RESET ---------------------------------------------------*/
+
+                body, html {
+                    font-family: sans-serif; 
+                    line-height: 1.5;
+                }
+
+                body {
+                    background-color: #ffffff; 
+                    color: #000000;
+                }
+
+               a {
+                    text-decoration: none;
+                    color: inherit; 
+                }
+
+                h1, h2, h3, h4, p {
+                    margin: 0;
+                    padding: 0;
+                }
+
+                button {
+                    font-family: sans-serif;
+                    font-size: inherit;
+                    line-height: inherit;
+                    border: none;
+                    background: none;
+                    cursor: pointer;
+                    outline: none;
+                }
+
+                header, footer, section, div {
+                    display: block;
+                }
+
             /* -------------------- ROOT VARIABLES --------------------------------------- */
 
-            /* --------Headings------- */
-                h1, h2, h3, h4 {
+                /* --CSS-- */
+                    * {
+                        box-sizing: border-box;
+                        margin: 0;
+                        padding: 0;
+                    }
+
+                /* --Root-- */
+                    html {
+                        background-color: #ffffff; 
+                    }
+
+                    body {
+                        min-width: 320px;
+                    }
+
+                /* --Typography-- */
+
+                    h1, h2, h3, h4 {
+                        font-family: 'Irish Grover', cursive;
+                    }
+
+                    h1 {
+                        font-size: 2.5em;
+                        color: #ffffff;
+                        text-shadow: 3px 3px 0 #000000; 
+                    }
+
+                    h2 {
+                        font-size: 1.75em;
+                    }
+
+                    h3 {
+                        font-size: 1.25em;
+                        text-align: center;
+                    }
+
+                    p {
+                        font-family: 'Habibi', sans-serif;
+                        font-size: 1em;
+                        line-height: 1.6;
+                        margin: 0 0 1em 0;
+                    }
+
+                /* --Header & Footer-- */
+
+                    header {
+                        display: flex;
+                        gap: 1rem;
+                        align-items: center;
+                        justify-content: space-between;
+                        box-sizing: border-box;
+                        padding: 20pt;
+                        background-color: #06A816;
+                    }
+
+
+                    footer {
+                        display: flex; 
+                        flex-wrap: wrap; 
+                        gap: 1rem; 
+                        padding: 1rem; 
+                        background-color:  #06A816; 
+                    }
+
+                    footer section {
+                        color: #ffffff;
+                        flex: 1 1 200px; 
+                        padding: 1rem; 
+                        box-sizing: border-box;
+                    }
+                  
+                    #copyright {
+                        text-align: center; 
+                        padding: 0.5rem; 
+                        margin-top: auto; 
+                        color: #06A816;
+                    }
+
+                /* --Nav-- */
+
+                    nav {
+                        text-align: right;
+                    }
+
+                    nav ul {
+                        list-style: none; 
+                        padding: 0; 
+                        margin: 0; 
+                    }
+
+                    nav li {
+                        display: inline; 
+                        margin-left: 0.5rem;
+                    }
+
+                    a {
+                        color: #ffffff;
+                        background-color: #E75D02;
+                        border: 2px solid #ffffff;
+                        padding: 0.5em 5em;
+                        border-radius: 0.4em;
+                        font-size: 1em;
+                        cursor: pointer;
+                        outline: none;
+                        transition: background-color 0.3s, color 0.3s;
+                    }
+
+                    nav button:hover {
+                        background-color: #ffffff;
+                        color: #E75D02;
+                    }
+
+                /* ---Top-- */
+
+                    .back-to-top {
+                        position: fixed;
+                        bottom: 2em;
+                        right: 2em;
+                        color: white;
+                        border: none;
+                        border-radius: 50%;
+                        padding: 15px;
+                        cursor: pointer;
+                        z-index: 2;
+                        transition: background-color 0.3s;
+                    }
+
+                /* --Items-- */
+
+                    .item {
+                        position: relative;
+                        display: inline-block;
+                    }
+
+                    .item img {
+                        display: block;
+                        width: 100%;
+                        height: auto;
+                    }
+
+                    .item p {
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        background-color: rgba(0, 0, 0, 0.8);
+                        color: #ffffff;
+                        padding: 0.5em 1em;
+                        text-align: center;
+                        font-size: 1.25em;
+                    }
+
+                /* --List-- */
+
+                    .item-list {
+                        display: flex;
+                        flex-wrap: wrap;
+                        justify-content: space-between;
+                        gap: 50px;
+                        padding: 3%;
+                    }
+
+                /* --Flexboxes-- */
+
+                    #flex1 div {
+                        display: flex;
+                        flex-wrap: wrap;
+                        gap: 13rem;
+                        justify-content: left;
+                    }
+
+                /* --Miss-- */
+
+                    #fruits, #vegetables {
+                        box-sizing: border-box;
+                        padding: 20pt;
+                    }
+
+                    i {
+                        color: #ffffff;
+                    }
+
+
+            /* --------Headings and Paragraphs------- */
+            
+                h1, h2, h3 {
                     font-family: 'Irish Grover', cursive;
+                }
+
+                h4, h5, h6 {
+                    font-family: 'Habibi', sans-serif;
                 }
                 
                 h3 {
                 text-align: center; 
                 }
 
-                h1 {font-size: 2.5em;
+                h1 {
+                    font-size: 2.5em;
                     color: #ffffff; 
                     text-shadow: 3px 3px 0 #000000; 
                 }
 
-                h2 {font-size: 1.75em;
+                h2 {
+                    font-size: 1.75em;
                 }
         
-                h3, p {font-size: 1.25em; 
+                h3, p {
+                    font-size: 1.25em; 
+                }
+
+                h4 {
+                    font-family: 'Habibi', sans-serif;
+                    font-size: 1em;
+                    font-size: 1em; 
+                    line-height: 1.6; 
+                    margin: 0 0 1em 0;
+                }
+
+                h5 {
+                    font-size: 1em;
+                }
+
+                h6 {
+                    font-size: 1em;
                 }
 
                 p {
@@ -63,74 +306,50 @@
                     line-height: 1.6; 
                     margin: 0 0 1em 0;
                 }
-
-                * {box-sizing:border-box;
-                    margin: 0pt;
-                    padding: 0pt;
-                }
-
-                html {background-color:#FFFFF;
-                }
-
-                body { min-width:320px;
-                }
-
-                header {
-                    display: flex;
-	                gap: 1rem;
-                    align-items: center;
-                    justify-content: space-between;
-                    box-sizing: border-box;
-                    padding: 20pt;
-                    background-color: #06A816;
-                }
-
-                footer section {
-                    box-sizing: border-box;
-                    padding: 20pt;
-                    background-color: #06A816;
-                    color: #ffffff; 
-                    font-size: 0.9em; 
-                }
-
-                footer p {
-                    color: #06A816; 
-                    text-align: center; 
-                    background-color: #ffffff; 
-                    margin: 0; 
-                }
-
-                i {
-                    color: #ffffff; 
-                }
-
-                #fruits {
-                    box-sizing: border-box;
-                    padding: 20pt;
-                }
-
-                #vegetables {
-    box-sizing: border-box;
-    padding: 20pt;
-}
+ 
 
             /* --------Nav------- */
+
+                .container {
+                    display: flex;
+                    flex-direction: column; 
+                    gap: 2rem; 
+                    padding: 1rem; 
+                }
+                nav ul{
+                    text-align: right;
+                }
+
                 nav button {
-                color: #ffffff; 
-                background-color: #E75D02; 
-                border: 2px solid #ffffff; 
-                padding: 0.5em 5em; 
-                border-radius: 0.4em; 
-                font-size: 1em; 
-                cursor: pointer; 
-                outline: none; =
-                transition: background-color 0.3s, color 0.3s; 
+                    color: #ffffff; 
+                    background-color: #E75D02; 
+                    border: 2px solid #ffffff; 
+                    padding: 0.5em 5em; 
+                    border-radius: 0.4em; 
+                    font-size: 1em; 
+                    cursor: pointer; 
+                    outline: none; 
+                    transition: background-color 0.3s, color 0.3s; 
                 }
 
                 nav button:hover {
                     background-color: #ffffff; 
                     color: #E75D02; 
                 }
+
+                .back-to-top {
+                    position: fixed; 
+                    bottom: 2em; 
+                    right: 2em; 
+                    color: white; 
+                    border: none;
+                    border-radius: 50%; 
+                    padding: 15px;
+                    cursor: pointer;
+                    z-index: 2; 
+                    transition: background-color 0.3s; 
+                }
+
             /* --------Item------- */
                 .item {
                     position: relative; 
@@ -155,68 +374,102 @@
                     font-size: 1.25em; 
                 }
 
+                .item-list {
+                    display: flex;
+                    flex-wrap: wrap; 
+                    justify-content: space-between; 
+                    gap: 50px; 
+                    padding: 3%; 
+                }
 
-                
             /* --------------------GLOBAL STYLES (mobile first/small) --------------------*/
+                body {
+                    font-size: 16px;
+                }
+
+                @media (min-width: 428px) {
+                    nav ul{
+                        display: grid;
+                        grid-template-columns: 1fr 1fr;
+                    }
+
+                    .container {
+                        display: grid;
+                        grid-template-rows: auto auto; 
+                        gap: 2rem; 
+                        padding: 1rem; 
+                    }                    
+                    
+                    .item-list {
+                        display: grid;
+                        grid-template-columns: 1fr; 
+                        gap: 1rem; 
+                        padding: 3%; 
+                    }
+                }
+
             /*-------------------- MEDIA QUERY (medium) --------------------------------*/
+                @media (min-width: 834px) {
+                    .item-list {
+                        display: grid;
+                        grid-template-columns: 1fr 1fr; 
+                        gap: 1rem; 
+                        padding: 3%; 
+                    }
+                }
+                
             /*-------------------- MEDIA QUERY (large) ------------------------------------*/
+
+                @media (min-width: 1280px) {
+                    .item-list {
+                        display: grid;
+                        grid-template-columns: 1fr 1fr 1fr; 
+                        gap: 1rem; 
+                        padding: 3%; 
+                    }
+                }
+
             /*-------------------- MEDIA QUERY (xl) ---------------------------------------*/
 
 
+                @media (min-width: 1440px) {
+                    main {
+                        max-width: 1200px;
+                        margin: 0 auto; 
+                    }
+                    .item-list {
+                        display: grid;
+                        grid-template-columns: 1fr 1fr 1fr 1fr; 
+                        gap: 1rem; 
+                        padding: 3%; 
+                    }
+                }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-            
-          
-
-            
         </style>
     </head>
 
     <body>
         <header>
-            <section>
-                <h1>Fiona's Farm</h1>
-                <br>
-                <p><i>Fresh from our farm to your family table</i></p>
-                <br>
-            </section>
-            <nav>
-                <a href="#fruits" class="nav-link"><button type="button">Fruits</button></a>
-                <a href="#vegetables" class="nav-link"><button type="button">Vegetables</button></a>
-            </nav>
-            <br>
+
+
+            
+            <div class="container">
+                <section id="Farm">
+                    <h1>Fiona's Farm</h1>
+                    <br>
+                    <p><i>Fresh from our farm to your family table</i></p>
+                </section>
+            </div>
+            
+            <div class="container">
+                <section id="navmenu">
+                    <nav>
+                            <a href="#fruits" class="nav-link">Fruits</a>
+                            <a href="#vegetables" class="nav-link">Vegetables</a>
+                            <a href="#top" class="back-to-top" title="Top">Top</a>
+                </nav>
+                </section>
+            </div>
 
         </header>
     
@@ -369,34 +622,42 @@
         </section>
 
         <footer>
-            <section>
-                <div class="contact-info">
-                    <br>
+                
+            
+            <section id="Contact">
                     <h3>Contact</h3>
-                    <br>1234 Fake Street,
+                </section>
+                    
+                <section id="Contact1">    
+                    <h4><br>1234 Fake Street,
                     <br>Mesa, AZ 85111
-                    <br>(480) 555-1234
-                </div>
-                <br>
-                <div class="hours">
-
+                    <br>(480) 555-1234</h4>
+                </section>
+                    
+                
+                <section id="Hours">    
                     <h3>Hours</h3>
-
-                    <br>Monday: Closed
+                </section>
+                    
+                <section id="Hours1">   
+                    <h4><br>Monday: Closed
                     <br>Tuesday: 6:00 AM - 2:00 PM
                     <br>Wednesday: 6:00 AM - 2:00 PM
                     <br>Thursday: 6:00 AM - 2:00 PM
                     <br>Friday: 6:00 AM - 9:00 PM
                     <br>Saturday: 6:00 AM - 9:00 PM
-                    <br>Sunday: 6:00 AM - 5:00 PM
-                </div>
-            </section>
-
-            <p>Copyright 2024</p>
-            <p></p>
+                    <br>Sunday: 6:00 AM - 5:00 PM</h4>
+                    
+                </section>
+                
+           
 
         </footer>
+        <section id="copyright">
+            <p>
+                <h4>Copyright 2024</h4>
+            </p>
+        </section>
+
     </body>
 </html>
-
-
